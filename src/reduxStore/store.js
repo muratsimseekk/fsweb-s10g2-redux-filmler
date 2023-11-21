@@ -1,9 +1,9 @@
 import { legacy_createStore as createStore } from "redux";
-import reducer from "../reducers/movieReducer";
+import  rootReducer from '../reducers/index';
 
 
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 
 

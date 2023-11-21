@@ -2,18 +2,20 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useHistory } from 'react-router-dom';
 import { deleteMovie } from '../actions/movieActions';
+import { addFavorite } from '../actions/favoritesActions';
 
 
 const Movie = () => {
   const { id } = useParams();
   const { push } = useHistory();
 
-  const movies = useSelector(store=> store.movies)
+  // dispatch kullanmak icin useDispatch hookunu kullandim.
+  const dispatch = useDispatch();
+
+  const movies = useSelector(store=> store.movieReducer.movies)
 
   const movie = movies.find(movie => movie.id === Number(id));
 
-  // dispatch kullanmak icin useDispatch hookunu kullandim.
-  const dispatch = useDispatch();
   
 
   //- Silme işleminin tetiklemesi gereken HTML öğesini bulun ve `event handler` oluşturup ve bu DOM öğesine bağlayın.
@@ -21,6 +23,10 @@ const Movie = () => {
 const deleteHandler=() => {
   dispatch(deleteMovie(movie.id))
   push('/movies')
+}
+const favHandler=() => {
+  console.log(movie);
+  dispatch(addFavorite(movie))
 }
 
 
@@ -53,7 +59,7 @@ const deleteHandler=() => {
       </div>
       <div className="px-5 py-3 border-t border-zinc-200 flex justify-end gap-2">
         <button onClick={deleteHandler} type="button" className="myButton bg-red-600 hover:bg-red-500">Sil</button>
-        <button  className="myButton bg-blue-600 hover:bg-blue-500 ">Favorilere ekle</button>
+        <button onClick={favHandler}  className="myButton bg-blue-600 hover:bg-blue-500 ">Favorilere ekle</button>
       </div>
     </div>
   );

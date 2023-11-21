@@ -11,7 +11,7 @@ const MovieList = () => {
   // const movies = useSelector(store => store.movies)
 
 
-  const movies =useSelector(store => store.movies)
+  const movies =useSelector(store => store.movieReducer.movies)
 
 
   

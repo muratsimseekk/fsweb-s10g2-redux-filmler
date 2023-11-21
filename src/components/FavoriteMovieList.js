@@ -1,9 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
-const FavoriteMovieList = (props) => {
-  const favorites = [];
+const FavoriteMovieList = () => {
+  
+  const favorites = useSelector(store => store.favReducer.favorites);
+  
+  console.log('favoriler listem',favorites);
 
   return (
     <div className="flex-1 sm:max-w-[250px] p-5 pr-5 bg-white shadow rounded-md">

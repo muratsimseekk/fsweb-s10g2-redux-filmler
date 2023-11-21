@@ -12,7 +12,6 @@ const initialState = {
 
 //Bu yeni case'in, `payload` aracılığıyla iletilen film datasını `movies` listesine ekleyin.
 const reducer = (state = initialState,action) => {
-  console.log(movies);
   switch (action.type) {
     case DELETE_MOVIE:
       return {
