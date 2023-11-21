@@ -10,7 +10,7 @@ const initialState = {
 
 //movieReducer.js içindeki initialState reducer'ın başlangıç değeri olarak atanmalıdır.
 
-
+//Bu yeni case'in, `payload` aracılığıyla iletilen film datasını `movies` listesine ekleyin.
 const reducer = (state = initialState,action) => {
   console.log(movies);
   switch (action.type) {
@@ -18,6 +18,10 @@ const reducer = (state = initialState,action) => {
       return {
         ...state,
         movies: state.movies.filter(item => (action.payload !== item.id))
+      }
+    case ADD_MOVIE:
+      return { ...state ,
+      movies : [...state.movies,action.payload]
       }
     default:
       return state;

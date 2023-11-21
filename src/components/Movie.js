@@ -9,14 +9,16 @@ const Movie = () => {
   const { push } = useHistory();
 
   const movies = useSelector(store=> store.movies)
+
   const movie = movies.find(movie => movie.id === Number(id));
 
+  // dispatch kullanmak icin useDispatch hookunu kullandim.
   const dispatch = useDispatch();
   
 
   //- Silme işleminin tetiklemesi gereken HTML öğesini bulun ve `event handler` oluşturup ve bu DOM öğesine bağlayın.
   //Bu handler içerisinde Filmin `id` değeri ile `deleteMovie` action'ını tetiklemek için `dispatch` edin. 
-const deleteHandler=(id) => {
+const deleteHandler=() => {
   dispatch(deleteMovie(movie.id))
   push('/movies')
 }
