@@ -11,7 +11,7 @@ const FavoriteMovieList = () => {
   const favorites = useSelector(store => store.favReducer.favorites);
   console.log('favorites',favorites);
   const displayFavorites = useSelector(store => store.favReducer.displayFavorites);
-  
+
 
   return (
     displayFavorites &&

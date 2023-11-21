@@ -1,5 +1,4 @@
 
-// - [ ] `switch` deyimine `default` case'ini ekleyin.
 
 import { ADD_FAVORITE, REMOVE_FAVORITE, TOGGLE_FAVORITES } from "../actions/favoritesActions";
 
@@ -10,7 +9,7 @@ const favInitialState = {
     displayFavorites: false
 }
 
-// TOGGLE_FAVORITES : displayFavorites state'ini tersine çevirsin.
+
 
 const favReducer = (state = favInitialState , action) => {
 

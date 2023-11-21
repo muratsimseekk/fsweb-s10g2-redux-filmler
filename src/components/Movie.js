@@ -22,6 +22,7 @@ const Movie = () => {
   //Bu handler içerisinde Filmin `id` değeri ile `deleteMovie` action'ını tetiklemek için `dispatch` edin. 
 const deleteHandler=() => {
   dispatch(deleteMovie(movie.id))
+  
   push('/movies')
 }
 const favHandler=() => {
