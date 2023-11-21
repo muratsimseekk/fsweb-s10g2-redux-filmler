@@ -23,7 +23,7 @@ const favReducer = (state = favInitialState , action) => {
         
         case ADD_FAVORITE:
             return {
-                ...state, favorites: [...state.favorites , action.payload]
+                ...state, favorites: [...state.favorites , state.favorites.some(item => item.id === action.payload.id) ? null : action.payload].filter(item => item !== null)
             }
             break;
         
