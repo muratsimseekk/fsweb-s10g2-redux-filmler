@@ -2,7 +2,6 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFavorite } from '../actions/favoritesActions';
-import { useParams } from 'react-router-dom/';
 
 
 const FavoriteMovieList = () => {
@@ -11,10 +10,11 @@ const FavoriteMovieList = () => {
   const dispatch = useDispatch();
   const favorites = useSelector(store => store.favReducer.favorites);
   console.log('favorites',favorites);
-  
+  const displayFavorites = useSelector(store => store.favReducer.displayFavorites);
   
 
   return (
+    displayFavorites &&
     <div className="flex-1 sm:max-w-[250px] p-5 pr-5 bg-white shadow rounded-md">
       <h5 className='font-bold'>Favori Filmler</h5>
       <div className="pt-3 text-sm">

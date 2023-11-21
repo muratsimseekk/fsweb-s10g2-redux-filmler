@@ -10,12 +10,14 @@ const favInitialState = {
     displayFavorites: false
 }
 
+// TOGGLE_FAVORITES : displayFavorites state'ini tersine çevirsin.
+
 const favReducer = (state = favInitialState , action) => {
 
     switch (action.type) {
         case TOGGLE_FAVORITES:
             return {
-                
+                ...state , displayFavorites : !state.displayFavorites
             }
             break;
         

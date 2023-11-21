@@ -83,7 +83,7 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 
 - [+] Store içerisinden `favorites` değerini `FavoriteMovieList` componentine bağlayın ve test edin.
 
-- [ ] `DisplayFavorites` değerini store içerisinden çekerek `Movie` ve `AppHeader` componentinde ilgili yerlerde kullanın.
+- [+] `DisplayFavorites` değerini store içerisinden çekerek `Movie` ve `AppHeader` componentinde ilgili yerlerde kullanın.
 
 #### Favoriler eylemleri ekleyin
 
@@ -91,10 +91,10 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 
 1. Aşağıdaki eylemler için action generator'lar hazır. Siz de reducer case'leri ve event handler kodlarını ekleyin:
 
-- `toggleFavorites`: `displayFavorites` state değerini `true` ve `false` olarak değiştirir. `displayFavorites` `false` olduğunda, favori filmler componenti uygulamada görünmez.
++ `toggleFavorites`: `displayFavorites` state değerini `true` ve `false` olarak değiştirir. `displayFavorites` `false` olduğunda, favori filmler componenti uygulamada görünmez.
 
-- `addFavorite`: Favoriler listesine yeni bir film nesnesi ekler.
-- `removeFavorite`: Gönderilen bir id ile bir film Nesnesini favoriler listesinden kaldırır.
++ `addFavorite`: Favoriler listesine yeni bir film nesnesi ekler.
++`removeFavorite`: Gönderilen bir id ile bir film Nesnesini favoriler listesinden kaldırır.
 
 ### Esnek Görevler
 
