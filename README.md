@@ -14,11 +14,11 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 
 ### Görev 1: Proje Kurulumu
 
-- [ ] Forklayın.
-- [ ] Klonlayın
-- [ ] Ana dizine gidin
-- [ ] `npm install`
-- [ ] `npm start`
+- [+] Forklayın.
+- [+] Klonlayın
+- [+] Ana dizine gidin
+- [+] `npm install`
+- [+] `npm start`
 
 ### Görev 2: Proje Gereksinimleri
 
@@ -41,7 +41,7 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 - [+] **`AppHeader` component'i, başlık metnini görüntülemek için `appTitle` değişkenini kullanır.**  
       `appTitle` değeri redux store'dan çekilmelidir.
 
-- [ ] Son olarak `Movie` componentindeki `movies` datası yine redux store içerisinden çekilmelidir.
+- [+] Son olarak `Movie` componentindeki `movies` datası yine redux store içerisinden çekilmelidir.
 
 #### Sil ve Film Ekle eylemlerini bağlama
 
