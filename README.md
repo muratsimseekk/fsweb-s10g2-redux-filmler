@@ -26,19 +26,19 @@ Bu projede, küçük bir film veritabanı içeren bir web uygulamasında çalı�
 
 > _DOM ve film reducer fonksiyonu sizin için hazırlandı, ancak onu redux'a bağlamak size bırakıldı._
 
-- [ ] Redux store'u yaratmak için `createStore` fonksiyonunu kullanın.
-- [ ] Redux store'u React uygulaması ile ilişkilendirmek için `Provider` bileşenini kullanın.
+- [+] Redux store'u yaratmak için `createStore` fonksiyonunu kullanın.
+- [+] Redux store'u React uygulaması ile ilişkilendirmek için `Provider` bileşenini kullanın.
 
 #### Film reducerını bağlamak
 
 > _`src/reducers/movieReducers.js` içerisinde `reducer` fonksiyonu ve `initialState` öntanımlı olarak gelmektedir. Filmler datası `initialState` içerisine eklenmiştir._
 
-- [ ] `movieReducer.js` içindeki `initialState` reducer'ın başlangıç değeri olarak atanmalıdır.
+- [+] `movieReducer.js` içindeki `initialState` reducer'ın başlangıç değeri olarak atanmalıdır.
 
-- [ ] **MovieList bileşeni, tüm filmlerimizi ekrana yazdırır.**
+- [+] **MovieList bileşeni, tüm filmlerimizi ekrana yazdırır.**
       MovieList component'i içerisindeki `movies` datası redux store'dan çekilmelidir. `react-redux` içerisinden `useSelector` hookunu kullanarak `movies` değerine erişin.
 
-- [ ] **`AppHeader` component'i, başlık metnini görüntülemek için `appTitle` değişkenini kullanır.**  
+- [+] **`AppHeader` component'i, başlık metnini görüntülemek için `appTitle` değişkenini kullanır.**  
       `appTitle` değeri redux store'dan çekilmelidir.
 
 - [ ] Son olarak `Movie` componentindeki `movies` datası yine redux store içerisinden çekilmelidir.
