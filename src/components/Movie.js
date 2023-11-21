@@ -25,7 +25,7 @@ const deleteHandler=() => {
   push('/movies')
 }
 const favHandler=() => {
-  console.log(movie);
+  console.log('secilen movie' ,movie);
   dispatch(addFavorite(movie))
 }
 

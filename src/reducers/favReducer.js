@@ -15,7 +15,7 @@ const favReducer = (state = favInitialState , action) => {
     switch (action.type) {
         case TOGGLE_FAVORITES:
             return {
-
+                
             }
             break;
         
@@ -26,7 +26,9 @@ const favReducer = (state = favInitialState , action) => {
             break;
         
         case REMOVE_FAVORITE:
-            return {}
+            return {
+                ...state , favorites : state.favorites.filter(item => (action.payload !== item.id))
+            }
             break;
         default:
             return state;
