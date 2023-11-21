@@ -16,7 +16,7 @@ const Movie = () => {
 
   const movie = movies.find(movie => movie.id === Number(id));
 
-  
+  const displayFavorites = useSelector(store => store.favReducer.displayFavorites);   
 
   //- Silme işleminin tetiklemesi gereken HTML öğesini bulun ve `event handler` oluşturup ve bu DOM öğesine bağlayın.
   //Bu handler içerisinde Filmin `id` değeri ile `deleteMovie` action'ını tetiklemek için `dispatch` edin. 
@@ -59,7 +59,8 @@ const favHandler=() => {
       </div>
       <div className="px-5 py-3 border-t border-zinc-200 flex justify-end gap-2">
         <button onClick={deleteHandler} type="button" className="myButton bg-red-600 hover:bg-red-500">Sil</button>
-        <button onClick={favHandler}  className="myButton bg-blue-600 hover:bg-blue-500 ">Favorilere ekle</button>
+        {displayFavorites ? <button onClick={favHandler}  className="myButton bg-blue-600 hover:bg-blue-500 ">Favorilere ekle</button> : null}
+        
       </div>
     </div>
   );
