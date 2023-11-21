@@ -5,6 +5,7 @@ const AppHeader = (props) => {
   const appTitle = "";
   const displayFavorites = true;
 
+  
   return (
     <div className="flex justify-between items-center shadow rounded-md bg-white p-2 pl-3 my-3">
       <h2 className='text-zinc-600'>{appTitle}</h2>

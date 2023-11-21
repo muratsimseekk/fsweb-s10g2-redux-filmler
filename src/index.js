@@ -9,10 +9,11 @@ import './index.css';
 import { legacy_createStore as createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers';
+import store from './reduxStore/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider>
+  <Provider store={store}>
       <BrowserRouter>
         <App />
         </BrowserRouter>
